@@ -7,10 +7,10 @@
             <h3>Modifier un module</h3>
         </div>
         <div class="card-body">
-            {{-- L'action pointe vers la route 'modules.update' avec l'ID du module --}}
+            
             <form action="{{ route('modules.update', $module->id) }}" method="POST">
                 @csrf
-                {{-- Directive pour simuler une requête PUT --}}
+                
                 @method('PUT')
 
                 <div class="mb-3">

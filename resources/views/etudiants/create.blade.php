@@ -7,9 +7,9 @@
             <h3>Ajouter un étudiant</h3>
         </div>
         <div class="card-body">
-            {{-- L'action pointe vers la route 'store' définie dans votre contrôleur --}}
+            
             <form action="{{ route('etudiants.store') }}" method="POST">
-                {{-- Protection obligatoire contre les attaques CSRF dans Laravel --}}
+                
                 @csrf
 
                 <div class="mb-3">

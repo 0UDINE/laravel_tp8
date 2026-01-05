@@ -7,9 +7,9 @@
             <h3>Ajouter un module</h3>
         </div>
         <div class="card-body">
-            {{-- Action vers la route 'modules.store' --}}
+            
             <form action="{{ route('modules.store') }}" method="POST">
-                {{-- Token de sécurité Laravel obligatoire --}}
+                
                 @csrf
 
                 <div class="mb-3">

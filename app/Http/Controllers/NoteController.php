@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class NoteController extends Controller
 {
     public function index(Request $request) {
-        // Simple liste avec filtre si l'ID étudiant est fourni
+        
         if ($request->etudiant_id) {
             $notes = Note::where('etudiant_id', $request->etudiant_id)->get();
         } else {
@@ -28,7 +28,7 @@ class NoteController extends Controller
     public function store(Request $request) {
         $data = $request->all();
         
-        // Calcul simple : somme divisée par 3 (ou votre propre coefficient)
+        
         $data['moyenne'] = ($data['note_intra'] + $data['note_projet'] + $data['note_final']) / 3;
 
         Note::create($data);
@@ -44,7 +44,7 @@ class NoteController extends Controller
         $note = Note::findOrFail($id);
         $data = $request->all();
         
-        // Recalcul de la moyenne lors de la modification
+       
         $data['moyenne'] = ($data['note_intra'] + $data['note_projet'] + $data['note_final']) / 3;
 
         $note->update($data);

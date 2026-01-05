@@ -27,10 +27,10 @@
                     <td>{{ $etudiant->email }}</td>
                     <td>{{ $etudiant->filiere }}</td>
                     <td>
-                        {{-- Bouton Modifier --}}
+                        
                         <a href="{{ route('etudiants.edit', $etudiant->id) }}" class="btn btn-primary btn-sm">Modifier</a>
 
-                        {{-- Formulaire de suppression --}}
+                       
                         <form action="{{ route('etudiants.destroy', $etudiant->id) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')

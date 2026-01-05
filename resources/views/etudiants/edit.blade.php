@@ -7,10 +7,10 @@
             <h3>Modifier un étudiant</h3>
         </div>
         <div class="card-body">
-            {{-- L'action pointe vers la route 'update' avec l'ID de l'étudiant --}}
+            
             <form action="{{ route('etudiants.update', $etudiant->id) }}" method="POST">
                 @csrf
-                {{-- Directive pour simuler une requête PUT pour la mise à jour --}}
+                
                 @method('PUT')
 
                 <div class="mb-3">

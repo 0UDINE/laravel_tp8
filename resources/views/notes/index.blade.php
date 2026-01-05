@@ -4,7 +4,7 @@
 <div class="container mt-4">
     <h3>Gestion des Notes</h3>
 
-    {{-- Section Filtres --}}
+    
     <div class="card mb-4">
         <div class="card-body">
             <form action="{{ route('notes.index') }}" method="GET" class="row g-3">
@@ -45,7 +45,7 @@
         <tbody>
             @foreach($notes as $note)
                 <tr>
-                    {{-- Accès aux relations via le modèle --}}
+                   
                     <td>{{ $note->etudiant->nom }} {{ $note->etudiant->prenom }}</td>
                     <td>{{ $note->module->intitule }}</td>
                     <td>{{ $note->note_intra }}</td>

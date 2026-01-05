@@ -38,7 +38,7 @@
     </nav>
 
     <main class="container">
-        {{-- Cette directive permet d'injecter le contenu des autres pages --}}
+        
         @yield('content')
     </main>
 

@@ -7,7 +7,7 @@
             <h3>Ajouter une note</h3>
         </div>
         <div class="card-body">
-            {{-- Action vers NoteController@store --}}
+            
             <form action="{{ route('notes.store') }}" method="POST">
                 @csrf
 

@@ -23,10 +23,10 @@
                     <td>{{ $module->intitule }}</td>
                     <td>{{ $module->semestre }}</td>
                     <td>
-                        {{-- Lien vers le formulaire de modification --}}
+                        
                         <a href="{{ route('modules.edit', $module->id) }}" class="btn btn-primary btn-sm">Modifier</a>
 
-                        {{-- Formulaire de suppression sécurisé --}}
+                        
                         <form action="{{ route('modules.destroy', $module->id) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
